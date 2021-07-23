@@ -1,6 +1,9 @@
 import React from "react"
+import { useSelector } from "react-redux";
 
 const AddContact = () => {
+    const contacts = useSelector((state) => state)
+    console.log(contacts)
     return (
         <div className="container">
             <div className="row">

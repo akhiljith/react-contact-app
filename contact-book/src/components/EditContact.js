@@ -1,13 +1,12 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
-function EditContact()
-{
+function EditContact() {
+    const { id } = useParams();
     return (
         <div className="container">
             <div className="row">
-                <h1 className="display-3 my-5 text-center">
-                    Edit Contact</h1>
+                <h1 className="display-3 my-5 text-center">Edit Contact {id}</h1>
                 <div className="col-md-6 shadow mx-auto p-5">
                     <form>
                         <div className="form-group mb-2">
@@ -20,8 +19,8 @@ function EditContact()
                             <input type="number" placeholder="Phone Number" className="form-control" />
                         </div>
                         <div className="form-group">
-                            <input type="submit" value="Update Contact" className="btn btn-dark mr-3" />
-                            <Link to="/" className="btn btn-dark">Cancel</Link>
+                            <input type="submit" value="Update Contact" className="btn btn-dark" />
+                            <Link to="/" className="btn btn-danger m-2">Cancel</Link>
                         </div>
                     </form>
                 </div>
