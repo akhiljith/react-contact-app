@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 const AddContact = () => {
     const [name, setName] = useState("");
@@ -58,7 +58,8 @@ const AddContact = () => {
                             <input type="number" placeholder="Phone Number" className="form-control" value={number} onChange={e => setNumber(e.target.value)} />
                         </div>
                         <div className="form-group">
-                            <input type="submit" value="Add Contact" className="btn btn-block btn-dark" />
+                            <input type="submit" value="Add Contact" className="btn btn-dark" />
+                            <Link to="/" className="btn btn-danger m-2">Cancel</Link>
                         </div>
                     </form>
                 </div>
