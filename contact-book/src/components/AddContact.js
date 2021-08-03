@@ -16,7 +16,7 @@ const AddContact = () => {
         e.preventDefault();
 
         const checkEmail = contacts.find(contact => contact.email === email && email);
-        const checkNumber = contacts.find(contact => contact.number === parseInt(number) && number);
+        const checkNumber = contacts.find(contact => parseInt(contact.number) === parseInt(number) && number);
 
         if (!name || !email || !number) {
             return toast.warning("Please fill in all fields")
